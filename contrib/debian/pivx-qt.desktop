@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
-Name=PIVX Core
-Comment=PIVX P2P Cryptocurrency
-Comment[fr]=PIVX, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=PIVX, eşten eşe kriptografik sanal para birimi
+Name=JACK Core
+Comment=JACK P2P Cryptocurrency
+Comment[fr]=JACK, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=JACK, eşten eşe kriptografik sanal para birimi
 Exec=pivx-qt %u
 Terminal=false
 Type=Application

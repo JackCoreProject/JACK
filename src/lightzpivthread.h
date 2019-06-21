@@ -1,10 +1,11 @@
 // Copyright (c) 2015-2019 The PIVX developers
+// Copyright (c) 2019 The JACK developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 //
 
-#ifndef PIVX_LIGHTZPIVTHREAD_H
-#define PIVX_LIGHTZPIVTHREAD_H
+#ifndef JACK_LIGHTZPIVTHREAD_H
+#define JACK_LIGHTZPIVTHREAD_H
 
 #include <atomic>
 #include "genwit.h"
@@ -67,4 +68,4 @@ private:
 
 };
 
-#endif //PIVX_LIGHTZPIVTHREAD_H
+#endif //JACK_LIGHTZPIVTHREAD_H

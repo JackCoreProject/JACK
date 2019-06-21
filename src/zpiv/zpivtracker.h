@@ -1,9 +1,10 @@
 // Copyright (c) 2018-2019 The PIVX developers
+// Copyright (c) 2019 The JACK developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PIVX_ZPIVTRACKER_H
-#define PIVX_ZPIVTRACKER_H
+#ifndef JACK_ZPIVTRACKER_H
+#define JACK_ZPIVTRACKER_H
 
 #include "zerocoin.h"
 #include "witness.h"
@@ -55,4 +56,4 @@ public:
     void Clear();
 };
 
-#endif //PIVX_ZPIVTRACKER_H
+#endif //JACK_ZPIVTRACKER_H

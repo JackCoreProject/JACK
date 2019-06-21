@@ -1,9 +1,10 @@
 // Copyright (c) 2018 The PIVX developers
+// Copyright (c) 2019 The JACK developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PIVX_ACCUMULATORCHECKPOINTS_H
-#define PIVX_ACCUMULATORCHECKPOINTS_H
+#ifndef JACK_ACCUMULATORCHECKPOINTS_H
+#define JACK_ACCUMULATORCHECKPOINTS_H
 
 #include <libzerocoin/bignum.h>
 #include <univalue/include/univalue.h>
@@ -18,4 +19,4 @@ namespace AccumulatorCheckpoints
     Checkpoint GetClosestCheckpoint(const int& nHeight, int& nHeightCheckpoint);
 }
 
-#endif //PIVX_ACCUMULATORCHECKPOINTS_H
+#endif //JACK_ACCUMULATORCHECKPOINTS_H
