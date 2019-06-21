@@ -29,7 +29,6 @@ Drag JACK-Qt to your applications folder, and then run JACK-Qt.
 * See the documentation at the [JACK Wiki](https://github.com/JACK-Project/JACK/wiki)
 for help and more information.
 * Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [JACK Forum](http://forum.jack.org/).
-* Join our Discord server [Discord Server](https://discord.jack.org)
 
 Building
 ---------------------
@@ -57,7 +56,6 @@ The JACK repo's [root README](/README.md) contains relevant information on the d
 
 ### Resources
 * Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [JACK](http://forum.jack.org/) forum.
-* Join the [JACK Discord](https://discord.jack.org).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
