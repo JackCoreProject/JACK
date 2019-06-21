@@ -1,0 +1,8 @@
+/usr/bin/jack-cli		--	gen_context(system_u:object_r:jack_exec_t,s0)
+/usr/sbin/jackd		--	gen_context(system_u:object_r:jack_exec_t,s0)
+/usr/lib(64)?/jack/jackd		--	gen_context(system_u:object_r:jack_exec_t,s0)
+
+/etc/jack(/.*)?		gen_context(system_u:object_r:jack_conf_t,s0)
+/var/lib/jack(/.*)?		gen_context(system_u:object_r:jack_var_lib_t,s0)
+
+(/var)?/run/jackd(/.*)?   gen_context(system_u:object_r:jack_var_run_t,s0)

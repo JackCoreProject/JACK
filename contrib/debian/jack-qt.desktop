@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=JACK Core
+Comment=JACK P2P Cryptocurrency
+Comment[fr]=JACK, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=JACK, eşten eşe kriptografik sanal para birimi
+Exec=jack-qt %u
+Terminal=false
+Type=Application
+Icon=jack128
+MimeType=x-scheme-handler/jack;
+Categories=Office;Finance;
+StartupWMClass=Pivx-qt

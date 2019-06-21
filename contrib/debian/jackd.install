@@ -1,0 +1,3 @@
+usr/local/bin/jackd usr/bin
+usr/local/bin/jack-cli usr/bin
+debian/examples/jack.conf etc/jack

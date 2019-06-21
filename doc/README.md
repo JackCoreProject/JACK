@@ -3,7 +3,7 @@ JACK Core
 
 Setup
 ---------------------
-[JACK Core](http://pivx.org/wallet) is the original JACK client and it builds the backbone of the network. However, it downloads and stores the entire history of JACK transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[JACK Core](http://jack.org/wallet) is the original JACK client and it builds the backbone of the network. However, it downloads and stores the entire history of JACK transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -13,12 +13,12 @@ The following are some helpful notes on how to run JACK Core on your native plat
 
 Unpack the files into a directory and run:
 
-- `bin/pivx-qt` (GUI) or
-- `bin/pivxd` (headless)
+- `bin/jack-qt` (GUI) or
+- `bin/jackd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run pivx-qt.exe.
+Unpack the files into a directory, and then run jack-qt.exe.
 
 ### macOS
 
@@ -28,8 +28,8 @@ Drag JACK-Qt to your applications folder, and then run JACK-Qt.
 
 * See the documentation at the [JACK Wiki](https://github.com/JACK-Project/JACK/wiki)
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [JACK Forum](http://forum.pivx.org/).
-* Join our Discord server [Discord Server](https://discord.pivx.org)
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [JACK Forum](http://forum.jack.org/).
+* Join our Discord server [Discord Server](https://discord.jack.org)
 
 Building
 ---------------------
@@ -49,15 +49,15 @@ The JACK repo's [root README](/README.md) contains relevant information on the d
 - [Multiwallet Qt Development](multiwallet-qt.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://www.fuzzbawls.pw/pivx/doxygen/)
+- [Source Code Documentation (External Link)](https://www.fuzzbawls.pw/jack/doxygen/)
 - [Translation Process](translation_process.md)
 - [Unit Tests](unit-tests.md)
 - [Unauthenticated REST Interface](REST-interface.md)
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [JACK](http://forum.pivx.org/) forum.
-* Join the [JACK Discord](https://discord.pivx.org).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [JACK](http://forum.jack.org/) forum.
+* Join the [JACK Discord](https://discord.jack.org).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

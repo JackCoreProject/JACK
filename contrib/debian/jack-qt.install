@@ -1,0 +1,6 @@
+usr/local/bin/jack-qt usr/bin
+share/pixmaps/jack32.xpm usr/share/pixmaps
+share/pixmaps/jack16.xpm usr/share/pixmaps
+share/pixmaps/jack128.png usr/share/pixmaps
+debian/jack-qt.desktop usr/share/applications
+debian/jack-qt.protocol usr/share/kde4/services/

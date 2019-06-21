@@ -1,0 +1,81 @@
+policy_module(jack, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type jack_t;
+type jack_exec_t;
+init_daemon_domain(jack_t, jack_exec_t)
+
+permissive jack_t;
+
+type jack_initrc_exec_t;
+init_script_file(jack_initrc_exec_t)
+
+type jack_conf_t;
+files_type(jack_conf_t)
+
+type jack_var_lib_t;
+files_type(jack_var_lib_t)
+
+type jack_var_run_t;
+files_type(jack_var_run_t)
+
+type jack_port_t;
+corenet_port(jack_port_t)
+
+########################################
+#
+# jack local policy
+#
+allow jack_t self:process { fork };
+
+allow jack_t self:fifo_file rw_fifo_file_perms;
+allow jack_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(jack_t, jack_conf_t, jack_conf_t)
+manage_files_pattern(jack_t, jack_conf_t, jack_conf_t)
+
+manage_dirs_pattern(jack_t, jack_var_lib_t, jack_var_lib_t)
+manage_files_pattern(jack_t, jack_var_lib_t, jack_var_lib_t)
+files_var_lib_filetrans(jack_t, jack_var_lib_t, { dir file })
+
+manage_dirs_pattern(jack_t, jack_var_run_t, jack_var_run_t)
+manage_files_pattern(jack_t, jack_var_run_t, jack_var_run_t)
+
+sysnet_dns_name_resolve(jack_t)
+corenet_all_recvfrom_unlabeled(jack_t)
+
+allow jack_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(jack_t)
+corenet_tcp_sendrecv_generic_node(jack_t)
+corenet_tcp_sendrecv_all_ports(jack_t)
+corenet_tcp_bind_generic_node(jack_t)
+
+gen_require(`
+    type jack_port_t;
+')
+allow jack_t jack_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type jack_port_t;
+')
+allow jack_t jack_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(jack_t)
+
+files_read_etc_files(jack_t)
+
+miscfiles_read_localization(jack_t)
+
+sysnet_dns_name_resolve(jack_t)
+
+allow jack_t jack_exec_t:file execute_no_trans;
+allow jack_t self:process setsched;
+corecmd_exec_ls(jack_t)
+corenet_tcp_connect_http_port(jack_t)
+dev_read_urand(jack_t)
+fs_getattr_xattr_fs(jack_t)
+kernel_read_system_state(jack_t)

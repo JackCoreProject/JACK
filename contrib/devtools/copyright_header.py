@@ -18,7 +18,7 @@ import os
 
 EXCLUDE = [
     # auto generated:
-    'src/qt/pivxstrings.cpp',
+    'src/qt/jackstrings.cpp',
     'src/chainparamsseeds.h',
     # other external copyrights:
     'src/tinyformat.h',
@@ -444,7 +444,7 @@ Usage:
     $ ./copyright_header.py update <base_directory>
 
 Arguments:
-    <base_directory> - The base directory of a pivx source code repository.
+    <base_directory> - The base directory of a jack source code repository.
 """
 
 def print_file_action_message(filename, action):
