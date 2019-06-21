@@ -16,7 +16,7 @@ from test_framework.util import assert_equal, assert_greater_than
 
 from fake_stake.base_test import JACK_FakeStakeTest
 
-class zPIVValidCoinSpendTest(JACK_FakeStakeTest):
+class zJACKValidCoinSpendTest(JACK_FakeStakeTest):
 
     def run_test(self):
         self.description = "Covers the 'valid publicCoinSpend spend' scenario."
@@ -32,7 +32,7 @@ class zPIVValidCoinSpendTest(JACK_FakeStakeTest):
         sleep(2)
 
         # 2) Mint zerocoins
-        self.log.info("Minting %d-denom zPIVs..." % DENOM_TO_USE)
+        self.log.info("Minting %d-denom zJACKs..." % DENOM_TO_USE)
         self.node.mintzerocoin(DENOM_TO_USE)
         self.node.generate(1)
         sleep(2)
@@ -100,4 +100,4 @@ class zPIVValidCoinSpendTest(JACK_FakeStakeTest):
 
 
 if __name__ == '__main__':
-    zPIVValidCoinSpendTest().main()
+    zJACKValidCoinSpendTest().main()

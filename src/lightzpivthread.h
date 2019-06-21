@@ -4,8 +4,8 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 //
 
-#ifndef JACK_LIGHTZPIVTHREAD_H
-#define JACK_LIGHTZPIVTHREAD_H
+#ifndef JACK_LIGHTZJACKTHREAD_H
+#define JACK_LIGHTZJACKTHREAD_H
 
 #include <atomic>
 #include "genwit.h"
@@ -52,7 +52,7 @@ public:
 
     void StartLightZpivThread(boost::thread_group& threadGroup) {
         LogPrintf("%s thread start\n", "pivx-light-thread");
-        threadIns = boost::thread(boost::bind(&CLightWorker::ThreadLightZPIVSimplified, this));
+        threadIns = boost::thread(boost::bind(&CLightWorker::ThreadLightZJACKSimplified, this));
     }
 
     void StopLightZpivThread() {
@@ -62,10 +62,10 @@ public:
 
 private:
 
-    void ThreadLightZPIVSimplified();
+    void ThreadLightZJACKSimplified();
 
     void rejectWork(CGenWit& wit, int blockHeight, uint32_t errorNumber);
 
 };
 
-#endif //JACK_LIGHTZPIVTHREAD_H
+#endif //JACK_LIGHTZJACKTHREAD_H
