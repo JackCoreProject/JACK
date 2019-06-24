@@ -255,7 +255,7 @@ The goal of JACK is to achieve a decentralized sustainable crypto currency with 
         <td>10% (0.6 JACK)</td>
     </tr>
     <tr>
-        <td>756001-</td>
+        <td>756001-∞</td>
         <td>5</td>
         <td>90% (4.5 JACK)</td>
         <td>10% (0.5 JACK)</td>
