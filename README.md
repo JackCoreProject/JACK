@@ -15,7 +15,7 @@ The goal of JACK is to achieve a decentralized sustainable crypto currency with 
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
 <tr><td>Max Coin Supply (PoW Phase)</td><td>0 JACK</td></tr>
 <tr><td>Max Coin Supply (PoS Phase)</td><td>50,000,000 JACK (TODO: Implement limit)</td></tr>
-<tr><td>Premine</td><td>2,500,000 JACK*</td></tr>
+<tr><td>Premine</td><td>2,500,000 JACK</td></tr>
 </table>
 
 ### Reward Distribution
