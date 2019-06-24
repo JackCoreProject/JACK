@@ -40,16 +40,224 @@ The goal of JACK is to achieve a decentralized sustainable crypto currency with 
 ### PoS Rewards Breakdown
 
 <table>
-<th>Phase</th><th>Block Height</th><th>Reward</th><th>Masternodes & Stakers</th><th>Budget</th>
-<tr><td>Phase 0</td><td>259201-302399</td><td>50 JACK</td><td>90% (45 JACK)</td><td>10% (5 JACK)</td></tr>
-<tr><td>Phase 1</td><td>302400-345599</td><td>45 JACK</td><td>90% (40.5 JACK)</td><td>10% (4.5 JACK)</td></tr>
-<tr><td>Phase 2</td><td>345600-388799</td><td>40 JACK</td><td>90% (36 JACK)</td><td>10% (4 JACK)</td></tr>
-<tr><td>Phase 3</td><td>388800-431999</td><td>35 JACK</td><td>90% (31.5 JACK)</td><td>10% (3.5 JACK)</td></tr>
-<tr><td>Phase 4</td><td>432000-475199</td><td>30 JACK</td><td>90% (27 JACK)</td><td>10% (3 JACK)</td></tr>
-<tr><td>Phase 5</td><td>475200-518399</td><td>25 JACK</td><td>90% (22.5 JACK)</td><td>10% (2.5 JACK)</td></tr>
-<tr><td>Phase 6</td><td>518400-561599</td><td>20 JACK</td><td>90% (18 JACK)</td><td>10% (2 JACK)</td></tr>
-<tr><td>Phase 7</td><td>561600-604799</td><td>15 JACK</td><td>90% (13.5 JACK)</td><td>10% (1.5 JACK)</td></tr>
-<tr><td>Phase 8</td><td>604800-647999</td><td>10 JACK</td><td>90% (9 JACK)</td><td>10% (1 JACK)</td></tr>
-<tr><td>Phase 9</td><td>648000-1154203</td><td>5 JACK</td><td>90% (4.5 JACK)</td><td>10% (0.5 JACK)</td></tr>
-<tr><td>Phase X</td><td>1154203-∞</td><td>6 JACK</td><td>84% (5 JACK/zJACK)</td><td>16% (1 JACK)</td></tr>
+    <th>Block height</th>
+    <th>Reward</th>
+    <th>Masternodes &amp; Stakers</th>
+    <th>Budget</th>
+    <tr>
+        <td>1-21600</td>
+        <td>5</td>
+        <td>80% (4 JACK)</td>
+        <td>20% (1 JACK)</td>
+    </tr>
+    <tr>
+        <td>21601-43200</td>
+        <td>5.5</td>
+        <td>80% (4.4 JACK)</td>
+        <td>20% (1.1 JACK)</td>
+    </tr>
+    <tr>
+        <td>43201-64800</td>
+        <td>6</td>
+        <td>80% (4.8 JACK)</td>
+        <td>20% (1.2 JACK)</td>
+    </tr>
+    <tr>
+        <td>64801-86400</td>
+        <td>6.5</td>
+        <td>80% (5.2 JACK)</td>
+        <td>20% (1.3 JACK)</td>
+    </tr>
+    <tr>
+        <td>86401-108000</td>
+        <td>7</td>
+        <td>85% (5.95 JACK)</td>
+        <td>15% (1.05 JACK)</td>
+    </tr>
+    <tr>
+        <td>108001-129600</td>
+        <td>7.5</td>
+        <td>85% (6.38 JACK)</td>
+        <td>15% (1.13 JACK)</td>
+    </tr>
+    <tr>
+        <td>129601-151200</td>
+        <td>8</td>
+        <td>85% (6.8 JACK)</td>
+        <td>15% (1.2 JACK)</td>
+    </tr>
+    <tr>
+        <td>151201-172800</td>
+        <td>8.5</td>
+        <td>85% (7.23 JACK)</td>
+        <td>15% (1.28 JACK)</td>
+    </tr>
+    <tr>
+        <td>172801-194400</td>
+        <td>9</td>
+        <td>90% (8.1 JACK)</td>
+        <td>10% (0.9 JACK)</td>
+    </tr>
+    <tr>
+        <td>194401-216000</td>
+        <td>9.5</td>
+        <td>90% (8.55 JACK)</td>
+        <td>10% (0.95 JACK)</td>
+    </tr>
+    <tr>
+        <td>216001-237600</td>
+        <td>10</td>
+        <td>90% (9 JACK)</td>
+        <td>10% (1 JACK)</td>
+    </tr>
+    <tr>
+        <td>237601-259200</td>
+        <td>11</td>
+        <td>90% (9.9 JACK)</td>
+        <td>10% (1.1 JACK)</td>
+    </tr>
+    <tr>
+        <td>259201-280800</td>
+        <td>12</td>
+        <td>90% (10.8 JACK)</td>
+        <td>10% (1.2 JACK)</td>
+    </tr>
+    <tr>
+        <td>280801-302400</td>
+        <td>13</td>
+        <td>90% (11.7 JACK)</td>
+        <td>10% (1.3 JACK)</td>
+    </tr>
+    <tr>
+        <td>302401-324000</td>
+        <td>14</td>
+        <td>90% (12.6 JACK)</td>
+        <td>10% (1.4 JACK)</td>
+    </tr>
+    <tr>
+        <td>324001-345600</td>
+        <td>15</td>
+        <td>90% (13.5 JACK)</td>
+        <td>10% (1.5 JACK)</td>
+    </tr>
+    <tr>
+        <td>345601-367200</td>
+        <td>16</td>
+        <td>90% (14.4 JACK)</td>
+        <td>10% (1.6 JACK)</td>
+    </tr>
+    <tr>
+        <td>367201-388800</td>
+        <td>17</td>
+        <td>90% (15.3 JACK)</td>
+        <td>10% (1.7 JACK)</td>
+    </tr>
+    <tr>
+        <td>388801-410400</td>
+        <td>18</td>
+        <td>90% (16.2 JACK)</td>
+        <td>10% (1.8 JACK)</td>
+    </tr>
+    <tr>
+        <td>410401-432000</td>
+        <td>19</td>
+        <td>90% (17.1 JACK)</td>
+        <td>10% (1.9 JACK)</td>
+    </tr>
+    <tr>
+        <td>432001-453600</td>
+        <td>20</td>
+        <td>90% (18 JACK)</td>
+        <td>10% (2 JACK)</td>
+    </tr>
+    <tr>
+        <td>453601-475200</td>
+        <td>21</td>
+        <td>90% (18.9 JACK)</td>
+        <td>10% (2.1 JACK)</td>
+    </tr>
+    <tr>
+        <td>475201-496800</td>
+        <td>22</td>
+        <td>90% (19.8 JACK)</td>
+        <td>10% (2.2 JACK)</td>
+    </tr>
+    <tr>
+        <td>496801-518400</td>
+        <td>23</td>
+        <td>90% (20.7 JACK)</td>
+        <td>10% (2.3 JACK)</td>
+    </tr>
+    <tr>
+        <td>518401-540000</td>
+        <td>24</td>
+        <td>90% (21.6 JACK)</td>
+        <td>10% (2.4 JACK)</td>
+    </tr>
+    <tr>
+        <td>540001-561600</td>
+        <td>25</td>
+        <td>90% (22.5 JACK)</td>
+        <td>10% (2.5 JACK)</td>
+    </tr>
+    <tr>
+        <td>561601-583200</td>
+        <td>22</td>
+        <td>90% (19.8 JACK)</td>
+        <td>10% (2.2 JACK)</td>
+    </tr>
+    <tr>
+        <td>583201-604800</td>
+        <td>19</td>
+        <td>90% (17.1 JACK)</td>
+        <td>10% (1.9 JACK)</td>
+    </tr>
+    <tr>
+        <td>604801-626400</td>
+        <td>16</td>
+        <td>90% (14.4 JACK)</td>
+        <td>10% (1.6 JACK)</td>
+    </tr>
+    <tr>
+        <td>626401-648000</td>
+        <td>13</td>
+        <td>90% (11.7 JACK)</td>
+        <td>10% (1.3 JACK)</td>
+    </tr>
+    <tr>
+        <td>648001-669600</td>
+        <td>10</td>
+        <td>90% (9 JACK)</td>
+        <td>10% (1 JACK)</td>
+    </tr>
+    <tr>
+        <td>669601-691200</td>
+        <td>9</td>
+        <td>90% (8.1 JACK)</td>
+        <td>10% (0.9 JACK)</td>
+    </tr>
+    <tr>
+        <td>691201-712800</td>
+        <td>8</td>
+        <td>90% (7.2 JACK)</td>
+        <td>10% (0.8 JACK)</td>
+    </tr>
+    <tr>
+        <td>712801-734400</td>
+        <td>7</td>
+        <td>90% (6.3 JACK)</td>
+        <td>10% (0.7 JACK)</td>
+    </tr>
+    <tr>
+        <td>734401-756000</td>
+        <td>6</td>
+        <td>90% (5.4 JACK)</td>
+        <td>10% (0.6 JACK)</td>
+    </tr>
+    <tr>
+        <td>756001-</td>
+        <td>5</td>
+        <td>90% (4.5 JACK)</td>
+        <td>10% (0.5 JACK)</td>
+    </tr>
 </table>
