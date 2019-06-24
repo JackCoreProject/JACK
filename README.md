@@ -25,16 +25,14 @@ The goal of JACK is to achieve a decentralized sustainable crypto currency with 
 <table>
 <th colspan=4>Genesis Block</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th></tr>
-<tr><td>1</td><td>60,000 JACK</td><td>Initial Pre-mine, burnt in block <a href="http://www.presstab.pw/phpexplorer/JACK/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0">279917</a></td></tr>
+<tr><td>1</td><td>2500000 JACK</td><td>Initial Pre-mine, burnt in block <a href="http://www.presstab.pw/phpexplorer/JACK/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0">1</a></td></tr>
 </table>
 
 ### PoW Rewards Breakdown
 
 <table>
 <th>Block Height</th><th>Masternodes</th><th>Miner</th><th>Budget</th>
-<tr><td>2-43200</td><td>20% (50 JACK)</td><td>80% (200 JACK)</td><td>N/A</td></tr>
-<tr><td>43201-151200</td><td>20% (50 JACK)</td><td>70% (200 JACK)</td><td>10% (25 JACK)</td></tr>
-<tr><td>151201-259200</td><td>45% (22.5 JACK)</td><td>45% (22.5 JACK)</td><td>10% (5 JACK)</td></tr>
+<tr><td>1-200</td><td>0% (0 JACK)</td><td>100% (0 JACK)</td><td>N/A</td></tr>
 </table>
 
 ### PoS Rewards Breakdown
