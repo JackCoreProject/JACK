@@ -16,6 +16,6 @@ WORKDIR /opt/jack-src
 ADD . /opt/jack-src/
 
 RUN ./autogen.sh
-RUN ./configure --prefix=/opt/jack
+RUN ./configure --prefix=/opt/jack CPPFLAGS='-DGENESIS_GENERATION'
 RUN make STATIC=1 -j9
 RUN make install
