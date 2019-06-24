@@ -2104,7 +2104,7 @@ CAmount GetSeeSaw(const CAmount& blockValue, int nMasternodeCount, int nHeight)
                   FormatMoney(mNodeCoins).c_str());
 
     CAmount ret = 0;
-    if (nHeight == 0) {
+    if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
     } else if (nHeight <= 21600 && nHeight >= 1) {
         ret = blockValue * 0.8;
