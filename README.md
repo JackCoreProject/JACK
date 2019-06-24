@@ -18,14 +18,12 @@ The goal of JACK is to achieve a decentralized sustainable crypto currency with 
 <tr><td>Premine</td><td>2,500,000 JACK*</td></tr>
 </table>
 
-*60,000 JACK Premine was burned in block [279917](http://www.presstab.pw/phpexplorer/JACK/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0)
-
 ### Reward Distribution
 
 <table>
 <th colspan=4>Genesis Block</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th></tr>
-<tr><td>1</td><td>2500000 JACK</td><td>Initial Pre-mine, burnt in block <a href="http://www.presstab.pw/phpexplorer/JACK/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0">1</a></td></tr>
+<tr><td>1</td><td>2500000 JACK</td><td>Initial Pre-mine</td></tr>
 </table>
 
 ### PoW Rewards Breakdown
