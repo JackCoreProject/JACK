@@ -166,7 +166,7 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "U.S. News & World Report Jan 28 2016 With His Absence, Trump Dominates Another Debate";
+        const char* pszTimestamp = "We have to make a Jack Pot";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
