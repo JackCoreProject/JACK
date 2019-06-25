@@ -7,7 +7,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 // find Genesis by GENESIS_GENERATION
-//#define GENESIS_GENERATION
+#define GENESIS_GENERATION
 
 #include "libzerocoin/Params.h"
 #include "chainparams.h"
@@ -18,6 +18,7 @@
 #include <assert.h>
 
 #include <boost/assign/list_of.hpp>
+#include "uint256.h"
 
 using namespace std;
 using namespace boost::assign;
@@ -57,10 +58,10 @@ int64_t getCurrentTime()
 }  
 
 // find a genesis in about 10-20 mins
-void _get(const ch * const pblock, const arith_uint256 hashTarget)
+void _get(const CBlockHeader * const pblock, const uint256 hashTarget)
 {
     uint256 hash;
-    ch *pb = new ch(*pblock);
+    CBlockHeader *pb = new ch(*pblock);
 	
     for (int cnt = 0, tcnt=0; true; ++cnt,++tcnt)
     {
@@ -68,8 +69,8 @@ void _get(const ch * const pblock, const arith_uint256 hashTarget)
 
 		//std::cout<<"hex hash = "<<hash.GetHex()<<std::endl;
 				
-        if (UintToArith256(hash) <= hashTarget) break;
-        pb->nNonce = ArithToUint256(UintToArith256(pb->nNonce) + 1);
+        if (hash <= hashTarget) break;
+        pb->nNonce = pb->nNonce + 1;
         if (cnt > 1e3)
         {
             pb->nTime = GetTime();
@@ -84,7 +85,7 @@ void _get(const ch * const pblock, const arith_uint256 hashTarget)
     
     std::lock_guard<std::mutex> guard(mtx);
     std::cout << "\n\t\t----------------------------------------\t" << std::endl;
-    std::cout << "\t" << pb->ToString() << std::endl;
+    std::cout << "\t" << ( (CBlock *) pb )->ToString() << std::endl; // 이래도 정녕 될까??
     std::cout << "\n\t\t----------------------------------------\t" << std::endl;
     delete pb;
 
@@ -94,23 +95,22 @@ void _get(const ch * const pblock, const arith_uint256 hashTarget)
 
 static void findGenesis(CBlockHeader *pb, const std::string &net)
 {
-    arith_uint256 hashTarget = arith_uint256().SetCompact(pb->nBits);
+    uint256 hashTarget = uint256().SetCompact(pb->nBits);
     std::cout << " finding genesis using target " << hashTarget.ToString()
         << ", " << net << std::endl;
 
     std::vector<std::thread> threads;
 
-    for (int i = 0; i < std::min(GetNumCores(), 100); ++i)
-    //for (int i = 0; i < 1; ++i)
+    for (int i = 0; i < 4; ++i)
     {
         if (i >= 0)
         {
 		// Randomise nonce
-        	arith_uint256 nonce = UintToArith256(GetRandHash());
+        	uint32_t nonce = 77777;
         	// Clear the top and bottom 16 bits (for local use as thread flags and counters)
         	nonce <<= 32;
         	nonce >>= 16;
-        	pb->nNonce = ArithToUint256(nonce);
+        	pb->nNonce = nonce;
 		//std::cout<<"i = "<<i<<"    nNonce = "<<pb->nNonce.ToString()<<std::endl;	
         }
         threads.push_back(std::thread(_get, pb, hashTarget));
