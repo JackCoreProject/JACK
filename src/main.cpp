@@ -2077,8 +2077,10 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = 7 * COIN;
     } else if (nHeight <= 756000 && nHeight >= 734401) {
         nSubsidy = 6 * COIN;
-    } else {
+    } else if (nHeight <= 8269000 && nHeight >= 756001){
         nSubsidy = 5 * COIN;
+    } else { // Mining target 50000000 JACK reached
+        nSubsidy = 0 * COIN;
     }
     return nSubsidy;
 }
