@@ -7,7 +7,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 // find Genesis by GENESIS_GENERATION
-#define GENESIS_GENERATION
+// #define GENESIS_GENERATION
 
 #include "libzerocoin/Params.h"
 #include "chainparams.h"
@@ -67,9 +67,13 @@ void _get(const CBlockHeader * const pblock, const uint256 hashTarget)
     {
         uint256 hash = pb->GetHash();
 
-		//std::cout<<"hex hash = "<<hash.GetHex()<<std::endl;
+        //std::cout<<"hex hash = "<<hash.GetHex()<<std::endl;
 				
-        if (hash <= hashTarget) break;
+        if (hash <= hashTarget) {
+            std::cout<<"FUCKING GENESIS FOUND: cryptohello tcnt = "<<tcnt<<" time = "<<getCurrentTime()<<" ms"<<std::endl;
+            break;
+        }
+
         pb->nNonce = pb->nNonce + 1;
         if (cnt > 1e3)
         {
@@ -85,7 +89,9 @@ void _get(const CBlockHeader * const pblock, const uint256 hashTarget)
     
     std::lock_guard<std::mutex> guard(mtx);
     std::cout << "\n\t\t----------------------------------------\t" << std::endl;
-    std::cout << "\t" << ( (CBlock *) pb )->ToString() << std::endl; // 이래도 정녕 될까??
+    std::cout << "F U C K!!" << std::endl;
+    std::cout << "\t" << pb -> GetHash().GetHex() << std::endl;
+    std::cout << "F U C K!! F U C K!!" << std::endl;
     std::cout << "\n\t\t----------------------------------------\t" << std::endl;
     delete pb;
 
@@ -285,6 +291,10 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 2402015;
 
+#ifdef GENESIS_GENERATION
+        findGenesis(&genesis, "main");
+#endif
+
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
         assert(genesis.hashMerkleRoot == uint256("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
@@ -292,10 +302,6 @@ public:
         vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "jack.seed.fuzzbawls.pw"));     // Primary DNS Seeder from Fuzzbawls
         vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "jack.seed2.fuzzbawls.pw"));    // Secondary DNS Seeder from Fuzzbawls
         vSeeds.push_back(CDNSSeedData("warrows.dev", "dnsseed.jack.warrows.dev"));    // Primery DNS Seeder from warrows
-
-#ifdef GENESIS_GENERATION
-        findGenesis(&genesis, "main");
-#endif
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 17);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 42);
