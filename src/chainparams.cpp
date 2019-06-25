@@ -70,7 +70,7 @@ void _get(const CBlockHeader * const pblock, const uint256 hashTarget)
         //std::cout<<"hex hash = "<<hash.GetHex()<<std::endl;
 				
         if (hash <= hashTarget) {
-            std::cout<<"FUCKING GENESIS FOUND: cryptohello tcnt = "<<tcnt<<" time = "<<getCurrentTime()<<" ms"<<std::endl;
+            std::cout<<"FUCKING GENESIS FOUND: cryptohello tcnt = "<<tcnt<<" time = "<<pb->nTime<<" ms " << "nNonce = " << pb->nNonce <<std::endl;
             break;
         }
 
@@ -281,23 +281,24 @@ public:
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 250 * COIN;
+        txNew.vout[0].nValue = 7 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("04c10e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1454124731;
+        genesis.nTime = 1561455218;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 2402015;
+        genesis.nNonce = 580683;
 
 #ifdef GENESIS_GENERATION
-        findGenesis(&genesis, "main");
+        std::cout << "Genesis Merkle root param: " << genesis.hashMerkleRoot.ToString() << std::endl;
+            //findGenesis(&genesis, "main");
 #endif
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
-        assert(genesis.hashMerkleRoot == uint256("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
+        assert(hashGenesisBlock == uint256("0x0000024751832ce5841a95d00998cf7094b552ebfdc6e953c2e2921acef246f9"));
+        assert(genesis.hashMerkleRoot == uint256("0xdcc2aa06770bffd3121cb0fefe90ab130472f5e03f84116d2c843a034a65b898"));
 
         vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "jack.seed.fuzzbawls.pw"));     // Primary DNS Seeder from Fuzzbawls
         vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "jack.seed2.fuzzbawls.pw"));    // Secondary DNS Seeder from Fuzzbawls
@@ -403,11 +404,11 @@ public:
         nSupplyBeforeFakeSerial = 0;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1454124731;
-        genesis.nNonce = 2402015;
+        genesis.nTime = 1561454354;
+        genesis.nNonce = 15496;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
+        assert(hashGenesisBlock == uint256("0x000004eccabfa23030f0535eb5b6535f4587908ce50a356508940b33e465066e"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -495,12 +496,11 @@ public:
         nFakeSerialBlockheightEnd = -1;
 
         //! Modify the regtest genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1454124731;
-        genesis.nNonce = 2402015;
+        genesis.nTime = 1561454554;
+        genesis.nNonce = 393952;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
-        //assert(hashGenesisBlock == uint256("0x4f023a2120d9127b21bbad01724fdb79b519f593f2a85b60d3d79160ec5f29df"));
+        assert(hashGenesisBlock == uint256("0x000001a0d6db8ffb3ba64942516c56fb645d14d6c78d26cd58e66eb0dcc450b6"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
