@@ -112,7 +112,7 @@ static void findGenesis(CBlockHeader *pb, const std::string &net)
         if (i >= 0)
         {
 		// Randomise nonce
-        	uint32_t nonce = 77777;
+        	uint32_t nonce = 777777;
         	// Clear the top and bottom 16 bits (for local use as thread flags and counters)
         	nonce <<= 32;
         	nonce >>= 16;
@@ -289,20 +289,21 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1561455218;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 580683;
+        genesis.nNonce = 777777;
 
 #ifdef GENESIS_GENERATION
+        std::cout << "Genesis Hash: " << genesis.GetHash() << std::endl;
         std::cout << "Genesis Merkle root param: " << genesis.hashMerkleRoot.ToString() << std::endl;
-            //findGenesis(&genesis, "main");
+        findGenesis(&genesis, "main");
 #endif
 
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x0000024751832ce5841a95d00998cf7094b552ebfdc6e953c2e2921acef246f9"));
         assert(genesis.hashMerkleRoot == uint256("0xdcc2aa06770bffd3121cb0fefe90ab130472f5e03f84116d2c843a034a65b898"));
 
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "jack.seed.fuzzbawls.pw"));     // Primary DNS Seeder from Fuzzbawls
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "jack.seed2.fuzzbawls.pw"));    // Secondary DNS Seeder from Fuzzbawls
-        vSeeds.push_back(CDNSSeedData("warrows.dev", "dnsseed.jack.warrows.dev"));    // Primery DNS Seeder from warrows
+        vSeeds.push_back(CDNSSeedData("jack1.blockseed.shop", "jack1.blockseed.shop"));
+        vSeeds.push_back(CDNSSeedData("jack2.blockseed.shop", "jack2.blockseed.shop"));
+        vSeeds.push_back(CDNSSeedData("jack3.blockseed.shop", "jack3.blockseed.shop"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 17);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 42);
