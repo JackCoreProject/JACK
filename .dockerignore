@@ -132,7 +132,9 @@ libbitcoinconsensus.pc
 .idea
 CMakeLists.txt
 cmake-build-debug
+/coindata/
 
 Dockerfile
 .dockerignore
 .git
+docker-compose.yml

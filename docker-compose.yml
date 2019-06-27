@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  jack:
+    build:
+      context: .
+    hostname: jack
+    domainname: jack.jackcore.org
+    restart: always
+    ports:
+      - "7777:7777"
+    volumes:
+      - "./coindata:/var/lib/coindata"
+    networks:
+      - hostnat
