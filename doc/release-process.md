@@ -6,7 +6,7 @@ Release Process
 ### Before every release candidate
 
 * Update translations (ping Fuzzbawls on Discord) see [translation_process.md](https://github.com/JACK-Project/JACK/blob/master/doc/translation_process.md#synchronising-translations).
-* Update manpages, see [gen-manpages.sh](https://github.com/jack-project/jack/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/JackCoreProject/jack/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 ### Before every major and minor release
 
@@ -48,10 +48,10 @@ If you're using the automated script (found in [contrib/gitian-build.py](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/jack-project/gitian.sigs.git
-    git clone https://github.com/jack-project/jack-detached-sigs.git
+    git clone https://github.com/JackCoreProject/gitian.sigs.git
+    git clone https://github.com/JackCoreProject/jack-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/jack-project/jack.git
+    git clone https://github.com/JackCoreProject/jack.git
 
 ### JACK maintainers/release engineers, suggestion for writing release notes
 

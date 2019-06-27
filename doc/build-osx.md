@@ -43,7 +43,7 @@ Build JACK Core
 
 1. Clone the JACK Core source code:
 
-        git clone https://github.com/jack-project/jack
+        git clone https://github.com/JackCoreProject/jack
         cd jack
 
 2.  Make the Homebrew OpenSSL headers visible to the configure script  (do ```brew info openssl``` to find out why this is necessary, or if you use Homebrew with installation folders different from the default).
