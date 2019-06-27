@@ -8,16 +8,16 @@
 #include "chainparams.h"
 #include "main.h"
 #include "txdb.h"
-#include "zpiv/deterministicmint.h"
+#include "zjack/deterministicmint.h"
 #include "key.h"
-#include "zpiv/accumulatorcheckpoints.h"
+#include "zjack/accumulatorcheckpoints.h"
 #include "libzerocoin/bignum.h"
 #include <boost/test/unit_test.hpp>
 #include <iostream>
-#include <zpiv/accumulators.h>
+#include <zjack/accumulators.h>
 #include "wallet/wallet.h"
-#include "zpiv/zpivwallet.h"
-#include "zpivchain.h"
+#include "zjack/zjackwallet.h"
+#include "zjackchain.h"
 #include "test_jack.h"
 
 using namespace libzerocoin;

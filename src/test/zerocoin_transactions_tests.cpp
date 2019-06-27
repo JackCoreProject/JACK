@@ -12,7 +12,7 @@
 #include "wallet/wallet.h"
 #include "wallet/walletdb.h"
 #include "txdb.h"
-#include "zpiv/zpivmodule.h"
+#include "zjack/zjackmodule.h"
 #include "test/test_jack.h"
 #include <boost/test/unit_test.hpp>
 #include <iostream>
@@ -32,7 +32,7 @@ BOOST_AUTO_TEST_CASE(zerocoin_spend_test)
 
     bool fFirstRun;
     cWallet.LoadWallet(fFirstRun);
-    cWallet.zpivTracker = unique_ptr<CzJACKTracker>(new CzJACKTracker(cWallet.strWalletFile));
+    cWallet.zjackTracker = unique_ptr<CzJACKTracker>(new CzJACKTracker(cWallet.strWalletFile));
     CMutableTransaction tx;
     CWalletTx* wtx = new CWalletTx(&cWallet, tx);
     bool fMintChange=true;

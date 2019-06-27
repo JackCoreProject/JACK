@@ -3,10 +3,10 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "zpivcontroldialog.h"
-#include "ui_zpivcontroldialog.h"
+#include "zjackcontroldialog.h"
+#include "ui_zjackcontroldialog.h"
 
-#include "zpiv/accumulators.h"
+#include "zjack/accumulators.h"
 #include "main.h"
 #include "walletmodel.h"
 
@@ -111,9 +111,9 @@ void ZPivControlDialog::updateList()
         itemMint->setData(COLUMN_CONFIRMATIONS, Qt::UserRole, QVariant((qlonglong) nConfirmations));
 
         {
-            LOCK(pwalletMain->zpivTracker->cs_spendcache);
+            LOCK(pwalletMain->zjackTracker->cs_spendcache);
 
-            CoinWitnessData *witnessData = pwalletMain->zpivTracker->GetSpendCache(mint.hashStake);
+            CoinWitnessData *witnessData = pwalletMain->zjackTracker->GetSpendCache(mint.hashStake);
             if (witnessData->nHeightAccStart > 0  && witnessData->nHeightAccEnd > 0) {
                 int nPercent = std::max(0, std::min(100, (int)((double)(witnessData->nHeightAccEnd - witnessData->nHeightAccStart) / (double)(nBestHeight - witnessData->nHeightAccStart - 220) * 100)));
                 QString percent = QString::number(nPercent) + QString("%");

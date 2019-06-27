@@ -3,15 +3,15 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <zpiv/deterministicmint.h>
-#include "zpivtracker.h"
+#include <zjack/deterministicmint.h>
+#include "zjacktracker.h"
 #include "util.h"
 #include "sync.h"
 #include "main.h"
 #include "txdb.h"
 #include "wallet/walletdb.h"
-#include "zpiv/accumulators.h"
-#include "zpiv/zpivwallet.h"
+#include "zjack/accumulators.h"
+#include "zjack/zjackwallet.h"
 #include "witness.h"
 
 using namespace std;
@@ -479,7 +479,7 @@ std::set<CMintMeta> CzJACKTracker::ListMints(bool fUnusedOnly, bool fMatureOnly,
             Add(dMint, false, false, zJACKWallet);
         }
         delete zJACKWallet;
-        LogPrint("zero", "%s: added %d dzpiv from DB\n", __func__, listDeterministicDB.size());
+        LogPrint("zero", "%s: added %d dzjack from DB\n", __func__, listDeterministicDB.size());
     }
 
     std::vector<CMintMeta> vOverWrite;
