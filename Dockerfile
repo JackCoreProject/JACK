@@ -20,3 +20,8 @@ RUN ./autogen.sh
 RUN ./configure --prefix=/opt/jack
 RUN make STATIC=1 -j9
 RUN make install
+RUN cp launcher.sh /opt/jack/
+
+WORKDIR /opt/jack
+
+CMD ["./launcher.sh"]
