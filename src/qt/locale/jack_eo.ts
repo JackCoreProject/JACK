@@ -1633,9 +1633,9 @@ Muktisendi: %1</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/jack-project/jack-project-translations</source>
+https://www.transifex.com/pivx-project/pivx-project-translations</source>
         <translation>Ĉu mankas lingvon aŭ nekompleta tradukado? Helpu la  tradukcio ĉi tie:
-https://www.transifex.com/jack-project/jack-project-translations</translation>
+https://www.transifex.com/pivx-project/pivx-project-translations</translation>
     </message>
     <message>
         <source>Connect to the JACK network through a SOCKS5 proxy.</source>

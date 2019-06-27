@@ -1622,9 +1622,9 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/jack-project/jack-project-translations</source>
+https://www.transifex.com/pivx-project/pivx-project-translations</source>
         <translation>Linguagem não encontrada ou tradução incompleta? Ajude contribuido com traduções aqui:
-https://www.transifex.com/jack-project/jack-project-translations</translation>
+https://www.transifex.com/pivx-project/pivx-project-translations</translation>
     </message>
     <message>
         <source>Connect to the JACK network through a SOCKS5 proxy.</source>
