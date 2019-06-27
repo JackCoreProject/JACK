@@ -88,7 +88,7 @@ int64_t nMaxTipAge = DEFAULT_MAX_TIP_AGE;
 unsigned int nStakeMinAge = 60 * 60;
 int64_t nReserveBalance = 0;
 
-/** Fees smaller than this (in upiv) are considered zero fee (for relaying and mining)
+/** Fees smaller than this (in ujack) are considered zero fee (for relaying and mining)
  * We are ~100 times smaller then bitcoin now (2015-06-23), set minRelayTxFee only 10 times higher
  * so it's still 10 times lower comparing to bitcoin.
  */
@@ -4689,17 +4689,17 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
         CTransaction &stakeTxIn = block.vtx[1];
 
         // Inputs
-        std::vector<CTxIn> pivInputs;
+        std::vector<CTxIn> jackInputs;
         std::vector<CTxIn> zJACKInputs;
 
         for (const CTxIn& stakeIn : stakeTxIn.vin) {
             if(stakeIn.IsZerocoinSpend()){
                 zJACKInputs.push_back(stakeIn);
             }else{
-                pivInputs.push_back(stakeIn);
+                jackInputs.push_back(stakeIn);
             }
         }
-        const bool hasJACKInputs = !pivInputs.empty();
+        const bool hasJACKInputs = !jackInputs.empty();
         const bool hasZJACKInputs = !zJACKInputs.empty();
 
         // ZC started after PoS.
@@ -4740,8 +4740,8 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
                 if(tx.IsCoinStake()) continue;
                 if(hasJACKInputs)
                     // Check if coinstake input is double spent inside the same block
-                    for (const CTxIn& pivIn : pivInputs){
-                        if(pivIn.prevout == in.prevout){
+                    for (const CTxIn& jackIn : jackInputs){
+                        if(jackIn.prevout == in.prevout){
                             // double spent coinstake input inside block
                             return error("%s: double spent coinstake input inside block", __func__);
                         }
@@ -4778,7 +4778,7 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
                 for (const CTransaction &t : bl.vtx) {
                     for (const CTxIn &in: t.vin) {
                         // Loop through every input of the staking tx
-                        for (const CTxIn &stakeIn : pivInputs) {
+                        for (const CTxIn &stakeIn : jackInputs) {
                             // if it's already spent
 
                             // First regular staking check

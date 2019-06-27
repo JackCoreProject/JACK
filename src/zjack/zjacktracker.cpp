@@ -159,7 +159,7 @@ CAmount CzJACKTracker::GetBalance(bool fConfirmedOnly, bool fUnconfirmedOnly) co
     }
 
     {
-        //LOCK(cs_pivtracker);
+        //LOCK(cs_jacktracker);
         // Get Unused coins
         for (auto& it : mapSerialHashes) {
             CMintMeta meta = it.second;

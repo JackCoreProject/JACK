@@ -50,12 +50,12 @@ public:
         return true;
     }
 
-    void StartLightZpivThread(boost::thread_group& threadGroup) {
+    void StartLightZjackThread(boost::thread_group& threadGroup) {
         LogPrintf("%s thread start\n", "jack-light-thread");
         threadIns = boost::thread(boost::bind(&CLightWorker::ThreadLightZJACKSimplified, this));
     }
 
-    void StopLightZpivThread() {
+    void StopLightZjackThread() {
         threadIns.interrupt();
         LogPrintf("%s thread interrupted\n", "jack-light-thread");
     }
