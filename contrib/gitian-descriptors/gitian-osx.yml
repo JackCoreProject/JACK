@@ -29,7 +29,7 @@ packages:
 - "python3-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/jack-project/jack.git"
+- "url": "https://github.com/JackCoreProject/jack.git"
   "dir": "jack"
 files:
 - "MacOSX10.11.sdk.tar.gz"

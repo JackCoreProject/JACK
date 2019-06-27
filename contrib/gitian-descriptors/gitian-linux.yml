@@ -33,7 +33,7 @@ packages:
 - "ca-certificates"
 - "python3"
 remotes:
-- "url": "https://github.com/jack-project/jack.git"
+- "url": "https://github.com/JackCoreProject/jack.git"
   "dir": "jack"
 files: []
 script: |
