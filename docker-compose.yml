@@ -11,5 +11,3 @@ services:
       - "7777:7777"
     volumes:
       - "./coindata:/var/lib/coindata"
-    networks:
-      - hostnat
