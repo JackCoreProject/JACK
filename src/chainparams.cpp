@@ -7,7 +7,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 // find Genesis by GENESIS_GENERATION
-// #define GENESIS_GENERATION
+//#define GENESIS_GENERATION
 
 #include "libzerocoin/Params.h"
 #include "chainparams.h"
@@ -112,10 +112,10 @@ static void findGenesis(CBlockHeader *pb, const std::string &net)
         if (i >= 0)
         {
 		// Randomise nonce
-        	uint32_t nonce = 777777;
+        	uint32_t nonce = 77777;
         	// Clear the top and bottom 16 bits (for local use as thread flags and counters)
-        	nonce <<= 32;
-        	nonce >>= 16;
+        	// nonce <<= 32;
+        	// nonce >>= 16;
         	pb->nNonce = nonce;
 		//std::cout<<"i = "<<i<<"    nNonce = "<<pb->nNonce.ToString()<<std::endl;	
         }
@@ -230,7 +230,7 @@ public:
         pchMessageStart[3] = 0xe9;
         vAlertPubKey = ParseHex("0000098d3ba6ba6e7423fa5cbd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50");
         nDefaultPort = 7777;
-        bnProofOfWorkLimit = ~uint256(0) >> 12; // JACK starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 20; // JACK starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 8100; // 75%
@@ -289,16 +289,18 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1561455218;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 777777;
+        genesis.nNonce = 77777;
 
-#ifdef GENESIS_GENERATION
-        std::cout << "Genesis Hash: " << genesis.GetHash() << std::endl;
+        std::cout << "Genesis Hash: ";
+	std::cout << genesis.GetHash().GetHex() << std::endl;
+	std::cout << genesis.ToString() << std::endl;
         std::cout << "Genesis Merkle root param: " << genesis.hashMerkleRoot.ToString() << std::endl;
+#ifdef GENESIS_GENERATION
         findGenesis(&genesis, "main");
 #endif
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000024751832ce5841a95d00998cf7094b552ebfdc6e953c2e2921acef246f9"));
+        //assert(hashGenesisBlock == uint256("0x5943b30119b4138dd1d641d56b806f8f1af09faef13a3e063c9dac2f8d620bb1"));
         assert(genesis.hashMerkleRoot == uint256("0xdcc2aa06770bffd3121cb0fefe90ab130472f5e03f84116d2c843a034a65b898"));
 
         vSeeds.push_back(CDNSSeedData("jack1.blockseed.shop", "jack1.blockseed.shop"));
@@ -406,10 +408,10 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1561454354;
-        genesis.nNonce = 15496;
+        genesis.nNonce = 526803;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000004eccabfa23030f0535eb5b6535f4587908ce50a356508940b33e465066e"));
+       //  assert(hashGenesisBlock == uint256("0x000004eccabfa23030f0535eb5b6535f4587908ce50a356508940b33e465066e"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -501,7 +503,7 @@ public:
         genesis.nNonce = 393952;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000001a0d6db8ffb3ba64942516c56fb645d14d6c78d26cd58e66eb0dcc450b6"));
+        //assert(hashGenesisBlock == uint256("0x000001a0d6db8ffb3ba64942516c56fb645d14d6c78d26cd58e66eb0dcc450b6"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.

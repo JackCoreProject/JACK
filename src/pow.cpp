@@ -122,20 +122,30 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
     if (Params().SkipProofOfWorkCheck())
         return true;
 
+    std::cout << nBits << endl;
     bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
+
+
+    //std::cout << fNegative << endl;
+    //std::cout << fOverflow << endl;
+    //std::cout << bnTarget.GetHex() << endl;
+    //std::cout << Params().ProofOfWorkLimit().GetHex() << endl;
 
     // Check range
     if (fNegative || bnTarget == 0 || fOverflow || bnTarget > Params().ProofOfWorkLimit())
         return error("CheckProofOfWork() : nBits below minimum work");
 
     // Check proof of work matches claimed amount
+    /*
+    std::cout << hash.GetHex() << endl;
+    std::cout << bnTarget.GetHex() << endl;
     if (hash > bnTarget) {
         if (Params().MineBlocksOnDemand())
             return false;
         else
             return error("CheckProofOfWork() : hash doesn't match nBits");
     }
-
+    */
     return true;
 }
 
