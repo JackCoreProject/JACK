@@ -24,18 +24,18 @@ URL:		https://jack.org/
 Source0:	https://jack.org/bin/jack-core-%{version}/jack-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
-Source10:	https://raw.githubusercontent.com/jack-project/jack/v%{version}/contrib/debian/examples/jack.conf
+Source10:	https://raw.githubusercontent.com/JackCoreProject/jack/v%{version}/contrib/debian/examples/jack.conf
 
 #man pages
-Source20:	https://raw.githubusercontent.com/jack-project/jack/v%{version}/doc/man/jackd.1
-Source21:	https://raw.githubusercontent.com/jack-project/jack/v%{version}/doc/man/jack-cli.1
-Source22:	https://raw.githubusercontent.com/jack-project/jack/v%{version}/doc/man/jack-qt.1
+Source20:	https://raw.githubusercontent.com/JackCoreProject/jack/v%{version}/doc/man/jackd.1
+Source21:	https://raw.githubusercontent.com/JackCoreProject/jack/v%{version}/doc/man/jack-cli.1
+Source22:	https://raw.githubusercontent.com/JackCoreProject/jack/v%{version}/doc/man/jack-qt.1
 
 #selinux
-Source30:	https://raw.githubusercontent.com/jack-project/jack/v%{version}/contrib/rpm/jack.te
+Source30:	https://raw.githubusercontent.com/JackCoreProject/jack/v%{version}/contrib/rpm/jack.te
 # Source31 - what about jack-tx and bench_jack ???
-Source31:	https://raw.githubusercontent.com/jack-project/jack/v%{version}/contrib/rpm/jack.fc
-Source32:	https://raw.githubusercontent.com/jack-project/jack/v%{version}/contrib/rpm/jack.if
+Source31:	https://raw.githubusercontent.com/JackCoreProject/jack/v%{version}/contrib/rpm/jack.fc
+Source32:	https://raw.githubusercontent.com/JackCoreProject/jack/v%{version}/contrib/rpm/jack.if
 
 Source100:	https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg
 

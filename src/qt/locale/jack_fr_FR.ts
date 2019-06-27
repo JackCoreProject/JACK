@@ -1937,9 +1937,9 @@ S'il vous plaît soyez patient après avoir cliqué sur l'importation.</translat
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/jack-project/jack-project-translations</source>
+https://www.transifex.com/pivx-project/pivx-project-translations</source>
         <translation>Langue manquante ou traduction incomplète? Aidez-nous à traduire ce projet ici:
-https://www.transifex.com/jack-project/jack-project-translations</translation>
+https://www.transifex.com/pivx-project/pivx-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
