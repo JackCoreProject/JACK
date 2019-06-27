@@ -35,7 +35,7 @@ public:
 
 // zJACKStake can take two forms
 // 1) the stake candidate, which is a zcmint that is attempted to be staked
-// 2) a staked zpiv, which is a zcspend that has successfully staked
+// 2) a staked zjack, which is a zcspend that has successfully staked
 class CZPivStake : public CStakeInput
 {
 private:

@@ -6327,7 +6327,7 @@ Please be patient...</source>
 <context>
     <name>ZPivControlDialog</name>
     <message>
-        <location filename="../forms/zpivcontroldialog.ui" line="+20"/>
+        <location filename="../forms/zjackcontroldialog.ui" line="+20"/>
         <source>Select zJACK to Spend</source>
         <translation type="unfinished"></translation>
     </message>

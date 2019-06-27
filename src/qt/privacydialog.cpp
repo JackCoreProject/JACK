@@ -15,7 +15,7 @@
 #include "sendcoinsentry.h"
 #include "walletmodel.h"
 #include "coincontrol.h"
-#include "zpivcontroldialog.h"
+#include "zjackcontroldialog.h"
 #include "spork.h"
 #include "askpassphrasedialog.h"
 
@@ -23,8 +23,8 @@
 #include <QSettings>
 #include <utilmoneystr.h>
 #include <QtWidgets>
-#include <zpiv/deterministicmint.h>
-#include <zpiv/accumulators.h>
+#include <zjack/deterministicmint.h>
+#include <zjack/accumulators.h>
 
 PrivacyDialog::PrivacyDialog(QWidget* parent) : QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::WindowCloseButtonHint),
                                                           ui(new Ui::PrivacyDialog),
@@ -473,7 +473,7 @@ void PrivacyDialog::sendzJACK()
             walletModel->updateAddressBookLabels(address.Get(), "(no label)", "send");
     }
 
-    // Clear zpiv selector in case it was used
+    // Clear zjack selector in case it was used
     ZPivControlDialog::setSelectedMints.clear();
     ui->labelzPivSelected_int->setText(QString("0"));
     ui->labelQuantitySelected_int->setText(QString("0"));
@@ -631,7 +631,7 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
         mapImmature.insert(make_pair(denom, 0));
     }
 
-    std::vector<CMintMeta> vMints = pwalletMain->zpivTracker->GetMints(false);
+    std::vector<CMintMeta> vMints = pwalletMain->zjackTracker->GetMints(false);
     map<libzerocoin::CoinDenomination, int> mapMaturityHeights = GetMintMaturityHeight();
     for (auto& meta : vMints){
         // All denominations

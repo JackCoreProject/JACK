@@ -5,7 +5,7 @@
 //
 
 
-#include "lightzpivthread.h"
+#include "lightzjackthread.h"
 #include "main.h"
 
 /****** Thread ********/
@@ -95,7 +95,7 @@ void CLightWorker::ThreadLightZJACKSimplified() {
             }
         } catch (std::exception& e) {
             //std::cout << "exception in light loop, closing it. " << e.what() << std::endl;
-            PrintExceptionContinue(&e, "lightzpivthread");
+            PrintExceptionContinue(&e, "lightzjackthread");
             break;
         }
     }
