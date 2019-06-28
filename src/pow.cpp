@@ -122,9 +122,7 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
     if (Params().SkipProofOfWorkCheck())
         return true;
 
-    std::cout << nBits << endl;
     bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
-
 
     //std::cout << fNegative << endl;
     //std::cout << fOverflow << endl;
