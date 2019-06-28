@@ -12,6 +12,9 @@ RUN apt-get install -y libqrencode-dev
 RUN apt-get install -y libgmp-dev
 RUN apt-get install -y g++-mingw-w64-x86-64 curl
 
+RUN update-alternatives --set x86_64-w64-mingw32-gcc /usr/bin/x86_64-w64-mingw32-gcc-posix \
+ && update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix
+
 RUN mkdir -p /opt/jack-src
 WORKDIR /opt/jack-src
 ADD . /opt/jack-src/
