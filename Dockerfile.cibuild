@@ -10,18 +10,28 @@ RUN apt-get install -y libdb4.8-dev libdb4.8++-dev
 RUN apt-get install -y libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
 RUN apt-get install -y libqrencode-dev
 RUN apt-get install -y libgmp-dev
+RUN apt-get install -y g++-mingw-w64-x86-64 curl
 
 RUN mkdir -p /opt/jack-src
 WORKDIR /opt/jack-src
 ADD . /opt/jack-src/
 
-RUN ./autogen.sh
-#RUN ./configure --prefix=/opt/jack CPPFLAGS='-DGENESIS_GENERATION'
-RUN ./configure --prefix=/opt/jack
-RUN make STATIC=1 -j9
-RUN make install
-RUN cp launcher.sh /opt/jack/
+RUN export PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') \
+ && cd depends \
+ && make HOST=x86_64-w64-mingw32 -j$(nproc)
 
-WORKDIR /opt/jack
+RUN ./autogen.sh \
+ && CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
 
-CMD ["./launcher.sh"]
+RUN make -j$(nproc)
+
+#RUN ./autogen.sh
+##RUN ./configure --prefix=/opt/jack CPPFLAGS='-DGENESIS_GENERATION'
+#RUN ./configure --prefix=/opt/jack
+#RUN make STATIC=1 -j9
+#RUN make install
+#RUN cp launcher.sh /opt/jack/
+#
+#WORKDIR /opt/jack
+#
+#CMD ["./launcher.sh"]
