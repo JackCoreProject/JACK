@@ -12,6 +12,6 @@ services:
     volumes:
       - "./coindata:/var/lib/coindata"
     environment:
-      MINING: false
-      STAKING: false
-      MASTERNODE: false
+      MINING: "false"
+      STAKING: "false"
+      MASTERNODE: "false"
