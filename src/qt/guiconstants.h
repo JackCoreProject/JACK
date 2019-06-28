@@ -55,7 +55,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 35
 
 #define QAPP_ORG_NAME "JACK"
-#define QAPP_ORG_DOMAIN "jack.org"
+#define QAPP_ORG_DOMAIN "jackproject.org"
 #define QAPP_APP_NAME_DEFAULT "JACK-Qt"
 #define QAPP_APP_NAME_TESTNET "JACK-Qt-testnet"
 

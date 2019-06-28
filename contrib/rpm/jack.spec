@@ -20,8 +20,8 @@ Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://jack.org/
-Source0:	https://jack.org/bin/jack-core-%{version}/jack-%{version}.tar.gz
+URL:		https://jackproject.org/
+Source0:	https://jackproject.org/bin/jack-core-%{version}/jack-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
 Source10:	https://raw.githubusercontent.com/JackCoreProject/jack/v%{version}/contrib/debian/examples/jack.conf
