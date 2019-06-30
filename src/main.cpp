@@ -2001,12 +2001,8 @@ int64_t GetBlockValue(int nHeight)
     }
 
     int64_t nSubsidy = 0;
-    if (nHeight == 0) {
-        nSubsidy = 2500000 * COIN; // Genesis
-    } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight > 0) {
-        // 0 reward block until first PoS target.
-        // TODO: Check it
-        nSubsidy = 0 * COIN;
+    if (nHeight <= Params().LAST_POW_BLOCK() && nHeight > 0) {
+        nSubsidy = 12500 * COIN;
     } else if (nHeight <= 21600 && nHeight > Params().LAST_POW_BLOCK()) {
         nSubsidy = 5 * COIN;
     } else if (nHeight <= 43200 && nHeight >= 21601) {
