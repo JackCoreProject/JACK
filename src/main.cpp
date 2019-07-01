@@ -2002,7 +2002,7 @@ int64_t GetBlockValue(int nHeight)
 
     int64_t nSubsidy = 0;
     if (nHeight <= Params().LAST_POW_BLOCK() && nHeight > 0) {
-        nSubsidy = 12500 * COIN;
+        nSubsidy = 2500 * COIN;
     } else if (nHeight <= 21600 && nHeight > Params().LAST_POW_BLOCK()) {
         nSubsidy = 5 * COIN;
     } else if (nHeight <= 43200 && nHeight >= 21601) {
@@ -2073,7 +2073,7 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = 7 * COIN;
     } else if (nHeight <= 756000 && nHeight >= 734401) {
         nSubsidy = 6 * COIN;
-    } else if (nHeight <= 8269000 && nHeight >= 756001){
+    } else if (nHeight <= 8269800 && nHeight >= 756001){
         nSubsidy = 5 * COIN;
     } else { // Mining target 50000000 JACK reached
         nSubsidy = 0 * COIN;
