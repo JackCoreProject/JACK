@@ -30,7 +30,7 @@ The goal of JACK is to achieve a decentralized sustainable crypto currency with 
 
 <table>
 <th>Block Height</th><th>Masternodes</th><th>Miner</th><th>Budget</th>
-<tr><td>1-200</td><td>0% (0 JACK)</td><td>100% (0 JACK)</td><td>N/A</td></tr>
+<tr><td>1-1000</td><td>80% (4 JACK)</td><td>20% (1 JACK)</td><td>N/A</td></tr>
 </table>
 
 ### PoS Rewards Breakdown
