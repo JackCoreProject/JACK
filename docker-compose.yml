@@ -15,3 +15,8 @@ services:
       MINING: "false"
       STAKING: "false"
       MASTERNODE: "false"
+      RPCSERVER: "true"
+      RPCUSER: "user"
+      RPCPASS: "password"
+      RPCPORT: "7778"
+
