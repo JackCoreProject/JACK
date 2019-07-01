@@ -300,7 +300,9 @@ public:
         //assert(hashGenesisBlock == uint256("0x5943b30119b4138dd1d641d56b806f8f1af09faef13a3e063c9dac2f8d620bb1"));
         assert(genesis.hashMerkleRoot == uint256("0xdcc2aa06770bffd3121cb0fefe90ab130472f5e03f84116d2c843a034a65b898"));
 
-        vSeeds.push_back(CDNSSeedData("seed1.nsseed.jackcore.org", "seed1.nsseed.jackcore.org"));
+        vSeeds.push_back(CDNSSeedData("node1.seed.jackcore.org", "node1.seed.jackcore.org"));
+        vSeeds.push_back(CDNSSeedData("node2.seed.jackcore.org", "node2.seed.jackcore.org"));
+        vSeeds.push_back(CDNSSeedData("node3.seed.jackcore.org", "node3.seed.jackcore.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 17);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 42);
