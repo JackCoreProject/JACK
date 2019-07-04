@@ -1999,9 +1999,9 @@ int64_t GetBlockValue(int nHeight)
     }
 
     int64_t nSubsidy = 0;
-    if (nHeight == 0) {
-        nSubsidy = 2500000 * COIN;
-    } else if (nHeight <= 21600 && nHeight > 0) {
+    if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 0) {
+        nSubsidy = 5000 * COIN;
+    } else if (nHeight <= 21600 && nHeight > Params().LAST_POW_BLOCK()) {
         nSubsidy = 5 * COIN;
     } else if (nHeight <= 43200 && nHeight >= 21601) {
         nSubsidy = 5.5 * COIN;
@@ -2100,9 +2100,9 @@ CAmount GetSeeSaw(const CAmount& blockValue, int nMasternodeCount, int nHeight)
                   FormatMoney(mNodeCoins).c_str());
 
     CAmount ret = 0;
-    if (nHeight == 0) {
+    if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 0) {
         ret = 0;
-    } else if (nHeight <= 21600 && nHeight >= 1) {
+    } else if (nHeight <= 21600 && nHeight > Params().LAST_POW_BLOCK()) {
         ret = blockValue * 0.8;
     } else if (nHeight <= 43200 && nHeight >= 21601) {
         ret = blockValue * 0.8;
