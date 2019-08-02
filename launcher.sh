@@ -2,7 +2,7 @@
 
 cd /opt/jack
 
-JACKOPTS="-datadir=/var/lib/coindata -daemon=0"
+JACKOPTS="-datadir=/var/lib/coindata -daemon=0 -printtoconsole=1"
 
 if [ "$MINING" = "true" ]; then
     JACKOPTS="$JACKOPTS -gen=1 -genproclimit=-1"
