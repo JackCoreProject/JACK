@@ -1,3 +1,4 @@
 #!/bin/bash
-docker build -t jack:latest . 1>&2
-docker save jack:latest | xz -T$(nproc)
+DOCKERTAG=$(git rev-parse --abbrev-ref HEAD)-$(git rev-parse --short HEAD)
+docker build -t jack:$DOCKERTAG . 1>&2
+docker save jack:$DOCKERTAG | xz -T$(nproc)
