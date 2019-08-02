@@ -303,6 +303,7 @@ public:
         vSeeds.push_back(CDNSSeedData("node1.seed.jackcore.org", "node1.seed.jackcore.org"));
         vSeeds.push_back(CDNSSeedData("node2.seed.jackcore.org", "node2.seed.jackcore.org"));
         vSeeds.push_back(CDNSSeedData("node3.seed.jackcore.org", "node3.seed.jackcore.org"));
+        vSeeds.push_back(CDNSSeedData("node4.seed.jackcore.org", "node4.seed.jackcore.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 17);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 42);
