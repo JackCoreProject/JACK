@@ -463,6 +463,7 @@ bool CMasternodeBroadcast::Create(CTxIn txin, CService service, CKey keyCollater
 
 bool CMasternodeBroadcast::CheckDefaultPort(std::string strService, std::string& strErrorRet, std::string strContext)
 {
+    return true;
     CService service = CService(strService);
     int nDefaultPort = Params().GetDefaultPort();
 
