@@ -15,7 +15,7 @@ ADD . /opt/jack-src/
 
 RUN ./autogen.sh
 #RUN ./configure --prefix=/opt/jack CPPFLAGS='-DGENESIS_GENERATION'
-RUN ./configure --disable-tests --disable-gui-tests --prefix=/opt/jack
+RUN ./configure --disable-tests --disable-gui-tests --prefix=/opt/jack CPPFLAGS='-ggdb' CFLAGS='-ggdb'
 RUN make STATIC=1 -j9
 RUN make install
 RUN cp launcher.sh /opt/jack/
