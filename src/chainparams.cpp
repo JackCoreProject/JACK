@@ -234,8 +234,8 @@ public:
         nRejectBlockOutdatedMajority = 10260; // 95%
         nToCheckBlockUpgradeMajority = 10800; // Approximate expected amount of blocks in 7 days (1440*7.5)
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // JACK: 1 day
-        nTargetSpacing = 1 * 60;  // JACK: 1 minute
+        nTargetTimespan = 3 * 60; // JACK: 1 day
+        nTargetSpacing = 3 * 60;  // JACK: 3 minute
         nMaturity = 100;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 50000000 * COIN;
